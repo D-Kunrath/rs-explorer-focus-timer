@@ -1,0 +1,46 @@
+/* globals */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+
+:root {
+  --tt-primary: #323238;
+  --tt-secondary: #ffffff;
+  --bg-primary: #e1e1e6;
+  --bg-secondary: #02799d;
+
+  font-size: clamp(1rem, 4vw, 3rem);
+}
+
+body,
+button,
+input {
+  font-family: sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  justify-content: center;
+  gap: clamp(1rem, 15vw, 3rem);
+}
+
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+/* timer */
+
+/* controls */
+
+/* soundboard */

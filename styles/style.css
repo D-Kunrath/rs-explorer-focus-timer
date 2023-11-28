@@ -85,8 +85,6 @@ button {
   font-size: 2rem;
   background-color: var(--bg-primary);
   color: var(--tt-primary);
-  display: grid;
-  place-content: center;
 }
 
 #soundboard button.active {

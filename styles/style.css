@@ -55,18 +55,45 @@ button {
   align-items: center;
 }
 
+#app.running .ph-play-circle,
+#app:not(.running) .ph-pause-circle {
+  display: none;
+}
+
+#app.running .ph-timer {
+  color: var(--bg-primary);
+  cursor: auto;
+}
+
 #timer {
   font-size: 2.5rem;
   display: flex;
 }
 
+#timer input {
+  font-size: 2.5rem;
+  color: var(--tt-primary);
+  border: none;
+  padding: 0;
+  text-align: center;
+  width: 3rem;
+}
+
 #controls {
   display: flex;
-  gap: 0.75rem;
+  gap: 0.5rem;
 }
 
 #controls button {
   font-size: 1rem;
+}
+
+#controls button:hover {
+  transform: scale(1.1);
+}
+
+#controls button:active {
+  transform: scale(1.05);
 }
 
 /* soundboard */
@@ -74,6 +101,7 @@ button {
 #soundboard {
   max-width: 7rem;
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 0.8rem;
 }
@@ -90,4 +118,13 @@ button {
 #soundboard button.active {
   background-color: var(--bg-secondary);
   color: var(--tt-secondary);
+}
+
+@media (max-width: 425px) {
+  :root {
+    font-size: clamp(1rem, 4vh, 3rem);
+  }
+  body {
+    flex-direction: column;
+  }
 }
